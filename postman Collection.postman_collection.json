@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "82b57404-f1b1-4c24-8640-821dfaff9992",
+		"name": "postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20447066"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MSwibmFtZSI6Inp1YmFlciIsImVtYWlsIjoidGVzdEBnYW1pbC5jb20ifSwiaWF0IjoxNjU5MDQxOTIxLCJleHAiOjE2NTkwNDU1MjF9.47yq5X34fdAShoaihLjQVfq0SFtVSK2-u_Ag7mlMfNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"zubaer\",\r\n    \"email\":\"test@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all the users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MSwibmFtZSI6Inp1YmFlciIsImVtYWlsIjoidGVzdEBnYW1pbC5jb20ifSwiaWF0IjoxNjU5MDQxNTg5LCJleHAiOjE2NTkwNDUxODl9.mUf-9yvlz6bQ70Ay-l2IpZ_mitZ-ZSjNueopFP2eMc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"zubaer\",\r\n    \"email\":\"test@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a specific user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MSwibmFtZSI6Inp1YmFlciIsImVtYWlsIjoidGVzdEBnYW1pbC5jb20ifSwiaWF0IjoxNjU5MDQxNTg5LCJleHAiOjE2NTkwNDUxODl9.mUf-9yvlz6bQ70Ay-l2IpZ_mitZ-ZSjNueopFP2eMc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"zubaer\",\r\n    \"email\":\"test@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\":\"jannat\",\r\n     \"user_id\":\"2\",\r\n    \"email\":\"test2@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\":\"efto\",\r\n    \r\n    \"email\":\"test4@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users//signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all the blogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\":\"efto\",\r\n    \r\n    \"email\":\"test4@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/news/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"news",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all the blogs of a specific user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\":\"efto\",\r\n    \r\n    \"email\":\"test4@gamil.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/news/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"news",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"title\":\"test\",\r\n        \"user_id\":\"1\",\r\n       \"description\":\"test\",\r\n        \"image\":\"test\",\r\n        \"name\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/news/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"news",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"yo\",\r\n    \"blog_id\": \"15\",\r\n    \"description\": \"yo\",\r\n    \"image\": \"yo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/news/update/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"news",
+						"update",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcl9pZCI6MiwibmFtZSI6IkZhdGlpbWEiLCJlbWFpbCI6InRlc3QyQGdhbWlsLmNvbSJ9LCJpYXQiOjE2NTkwNDIxNzYsImV4cCI6MTY1OTA0NTc3Nn0.GyA81unV7788Hwe-_u7T5PcxQjhabI6VSaktYjawbgw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"blog_id\": \"15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/news/delete/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"news",
+						"delete",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
