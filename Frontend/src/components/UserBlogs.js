@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Blog from './Blog'
+import { Grid } from '@mui/material'
 
 function UserBlogs() {
   
@@ -21,18 +22,22 @@ function UserBlogs() {
    console.log(blogs)
   return (
     <div>
-      {blogs &&
-        blogs.map((blog, index) => (
-          <Blog
-            blog_id={blog.blog_id}
-            isUser={localStorage.getItem('user_id') == blog.user_id}
-            user_id={blog.user_id}
-            title={blog.title}
-            description={blog.description}
-            image={blog.image}
-            name={blog.name}
-          />
-        ))}
+      <Grid container justify="flex-start" columnSpacing={16} rowSpacing={10}>
+        {blogs &&
+          blogs.map((blog, index) => (
+            <Grid key={index} item xs="4" spacing={2}>
+              <Blog
+                blog_id={blog.blog_id}
+                isUser={localStorage.getItem('user_id') == blog.user_id}
+                user_id={blog.user_id}
+                title={blog.title}
+                description={blog.description}
+                image={blog.image}
+                name={blog.name}
+              />
+            </Grid>
+          ))}
+      </Grid>
     </div>
   )
 }

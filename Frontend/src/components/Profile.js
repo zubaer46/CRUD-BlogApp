@@ -113,11 +113,12 @@ const Profile = () => {
               margin="auto"
               variant="outlined"
             />
-            <Button
-              sx={{ mt: 2, borderRadius: 4 }}
+           <Button
+              sx={{ mt: 2, borderRadius: 4 ,width:180,display:'flex',justifyContent: 'center', alignSelf: 'center'}}
               variant="contained"
+              width="180"
               color="warning"
-              type="submit"
+              type="submit"       
             >
               Submit
             </Button>

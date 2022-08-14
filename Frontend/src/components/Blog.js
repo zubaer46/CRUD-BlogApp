@@ -38,7 +38,8 @@ const Blog = ({ title, description, image, name, isUser, user_id, blog_id }) => 
     <div>
       <Card
         sx={{
-          width: '50%',
+          width: '100%',
+          height: '100%',
           margin: 'auto',
           mt: 2,
           padding: 2,
@@ -48,28 +49,31 @@ const Blog = ({ title, description, image, name, isUser, user_id, blog_id }) => 
           },
         }}
       >
-        {isUser && (
-          <Box display="flex">
-            <IconButton onClick={handleEdit} sx={{ marginLeft: 'auto' }}>
-              <EditIcon color="warning" />
-            </IconButton>
-            <IconButton onClick={handleDelete}>
-              <DeleteForeverIcon color="error" />
-            </IconButton>
-          </Box>
-        )}
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: 'black' }} aria-label="recipe">
-              {user_id}
-            </Avatar>
-          }
-          title={title}
-        />
-        <CardMedia component="img" height="300" image={image} alt="image was not provided..." />
+        <Box display="flex">
+          <CardHeader
+            avatar={
+              <Avatar sx={{ bgcolor: 'black' }} aria-label="recipe">
+                {user_id}
+              </Avatar>
+            }
+            title={title}
+          />
+          {isUser && (
+            <Box display="flex" sx={{ flexGrow: 1 }}>
+              <IconButton onClick={handleEdit} sx={{ marginLeft: 'auto' }}>
+                <EditIcon color="warning" />
+              </IconButton>
+              <IconButton onClick={handleDelete}>
+                <DeleteForeverIcon color="error" />
+              </IconButton>
+            </Box>
+          )}
+        </Box>
+
+        <CardMedia component="img" height="400" image={image} alt="image was not provided..." />
         <CardContent>
-            <hr/>
-            <br/>
+          <hr />
+          <br />
           <Typography variant="body2" color="text.secondary">
             <b className="bold">{name}</b> {': '} {description}
           </Typography>
