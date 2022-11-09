@@ -22,7 +22,7 @@ const BlogDetail = () => {
   }
   const fetchDetails = async () => {
     const res = await axios
-      .get(`http://localhost:3000/api/news/${id}`)
+      .get(`http://localhost:5000/api/news/${id}`)
       .catch((err) => console.log(err))
     const data = await res.data
      
@@ -45,7 +45,7 @@ const BlogDetail = () => {
   const sendRequest = async () => {
      
     const res = await axios
-      .put(`http://localhost:3000/api/news/update/${id}`, {
+      .put(`http://localhost:5000/api/news/update/${id}`, {
         blog_id:id,
         title: inputs.title,
         description: inputs.description,

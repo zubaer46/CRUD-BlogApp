@@ -8,5 +8,7 @@ const pool = createPool({
   database: process.env.MYSQL_DB,
   connectionLimit: 10
 });
+const mysql = require('mysql2');
+const connection = mysql.createConnection(process.env.DATABASE_URL);
 
-module.exports = pool;
+module.exports = connection;

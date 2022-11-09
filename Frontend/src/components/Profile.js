@@ -22,7 +22,7 @@ const Profile = () => {
   }
   const fetchDetails = async () => {
     const res = await axios
-      .get(`http://localhost:3000/api/users/${id}`)
+      .get(`http://localhost:5000/api/users/${id}`)
       .catch((err) => console.log(err))
     const data = await res.data
 
@@ -43,7 +43,7 @@ const Profile = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .put(`http://localhost:3000/api/users/update/${id}`, {
+      .put(`http://localhost:5000/api/users/update/${id}`, {
         user_id: id,
         name: inputs.name,
         email: inputs.email,

@@ -21,7 +21,7 @@ const Blog = ({ title, description, image, name, isUser, user_id, blog_id }) => 
   }
   const deleteRequest = async () => {
     const res = await axios
-      .put(`http://localhost:3000/api/news/delete/${blog_id}`, {
+      .put(`http://localhost:5000/api/news/delete/${blog_id}`, {
         blog_id: blog_id,
       })
       .catch((err) => console.log(err))

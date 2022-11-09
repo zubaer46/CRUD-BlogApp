@@ -4,22 +4,21 @@ import Blog from './Blog'
 import { Grid } from '@mui/material'
 
 function UserBlogs() {
-  
   const [blogs, setBlogs] = useState()
   const id = localStorage.getItem('user_id')
   const sendRequest = async () => {
     const res = await axios
-      .get(`http://localhost:3000/api/news/user/${id}`)
+      .get(`http://localhost:5000/api/news/user/${id}`)
       .catch((err) => console.log(err))
     const data = await res.data
-    
+
     return data
   }
-  
-   useEffect(() => {
-     sendRequest().then((data) => setBlogs(data.data))
-   }, []);
-   console.log(blogs)
+
+  useEffect(() => {
+    sendRequest().then((data) => setBlogs(data.data))
+  }, [])
+  console.log(blogs)
   return (
     <div>
       <Grid container justify="flex-start" columnSpacing={16} rowSpacing={10}>
