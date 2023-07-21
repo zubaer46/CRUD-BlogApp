@@ -2,13 +2,11 @@ import { Box, Button, InputLabel, TextField, Typography } from '@mui/material'
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+//test1
 
 const labelStyles = { mb: 1, mt: 2, fontSize: '24px', fontWeight: 'bold' }
 
 const AddBlog = () => {
-
-  
   const navigate = useNavigate()
   const [inputs, setInputs] = useState({
     title: '',
@@ -22,28 +20,27 @@ const AddBlog = () => {
     }))
   }
 
-const sendRequest = async () => {
-  const res = await axios
-    .post('http://localhost:5000/api/news/add', {
-      title: inputs.title,
-      description: inputs.description,
-      image: inputs.image,
-      user_id: localStorage.getItem('user_id'),
-      name: localStorage.getItem('name'),
-    })
-    .catch((err) => console.log(err))
-  const data = await res.data
- 
-  return data
-}
-const handleSubmit = (e) => {
-  e.preventDefault()
-  console.log(inputs)
-  sendRequest()
-    .then((data) => console.log(data))
-    .then(() => navigate('/blogs'))
-}
+  const sendRequest = async () => {
+    const res = await axios
+      .post('http://localhost:5000/api/news/add', {
+        title: inputs.title,
+        description: inputs.description,
+        image: inputs.image,
+        user_id: localStorage.getItem('user_id'),
+        name: localStorage.getItem('name'),
+      })
+      .catch((err) => console.log(err))
+    const data = await res.data
 
+    return data
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(inputs)
+    sendRequest()
+      .then((data) => console.log(data))
+      .then(() => navigate('/blogs'))
+  }
 
   return (
     <div>
@@ -61,7 +58,6 @@ const handleSubmit = (e) => {
           width={'80%'}
         >
           <Typography
-            
             fontWeight={'bold'}
             padding={3}
             color="grey"
@@ -70,33 +66,24 @@ const handleSubmit = (e) => {
           >
             Post Your Blog
           </Typography>
-          <InputLabel  sx={labelStyles}>
-            Title
-          </InputLabel>
+          <InputLabel sx={labelStyles}>Title</InputLabel>
           <TextField
-            
             name="title"
             onChange={handleChange}
             value={inputs.title}
             margin="auto"
             variant="outlined"
           />
-          <InputLabel  sx={labelStyles}>
-            Description
-          </InputLabel>
+          <InputLabel sx={labelStyles}>Description</InputLabel>
           <TextField
-            
             name="description"
             onChange={handleChange}
             value={inputs.description}
             margin="auto"
             variant="outlined"
           />
-          <InputLabel  sx={labelStyles}>
-            ImageURL
-          </InputLabel>
+          <InputLabel sx={labelStyles}>ImageURL</InputLabel>
           <TextField
-            
             name="image"
             onChange={handleChange}
             value={inputs.image}
